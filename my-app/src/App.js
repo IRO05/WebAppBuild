@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useRef, useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { TopBar } from './components/Dashboard/TopBar/TopBar'
 import { PlaybackControls } from './components/Dashboard/PlaybackControls/PlaybackControls'
@@ -119,7 +119,7 @@ function App() {
 
   return (
     <AuthProvider>
-      <BrowserRouter basename='/WebAppBuild'>
+      <HashRouter>
         <SignUp
           isOpen={showAuth}
           onClose={() => setShowAuth(false)}
@@ -211,7 +211,7 @@ function App() {
             />
           </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
